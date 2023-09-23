@@ -20,7 +20,7 @@ bookRouter.post("/add-book", async (req, res) => {
 bookRouter.get("/retrive-book", async (req, res) => {
   try {
     const books = await BookModel.find();
-    res.status(200).json({ books });
+    res.status(200).json(books);
   } catch (error) {
     res
       .status(500)
